@@ -1,9 +1,7 @@
 import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_instagram_clone/data/firebase_service/firestor.dart';
 import 'package:flutter_instagram_clone/data/firebase_service/storage.dart';
-
 import 'package:flutter_instagram_clone/util/exeption.dart';
 
 class Authentication {
@@ -35,12 +33,10 @@ class Authentication {
           username.isNotEmpty &&
           bio.isNotEmpty) {
         if (password == passwordConfirme) {
-          // create user with email and password
           await _auth.createUserWithEmailAndPassword(
             email: email.trim(),
             password: password.trim(),
           );
-          // upload profile image on storage
 
           if (profile != File('')) {
             URL =
@@ -49,7 +45,6 @@ class Authentication {
             URL = '';
           }
 
-          // get information with firestor
 
           await Firebase_Firestor().CreateUser(
             email: email,

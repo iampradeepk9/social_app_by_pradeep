@@ -52,14 +52,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
                               ),
                             );
                           },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.grey,
-                            ),
-                            child: CachedImage(
-                              snap['postImage'],
-                            ),
-                          ),
                         );
                       },
                       childCount: snapshot.data!.docs.length,

@@ -110,7 +110,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ignore: non_constant_identifier_names
   Widget Head(Usermodel user) {
     return Container(
       color: Colors.white,
@@ -123,12 +122,49 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 10.h),
                 child: ClipOval(
                   child: SizedBox(
-                    width: 80.w,
-                    height: 80.h,
+                    width: 100.w,
+                    height: 100.h,
                     child: CachedImage(user.profile),
                   ),
                 ),
               ),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      user.username,
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 5.h),
+                    Row(
+                      children: [
+                        Text(
+                          "Address: " ,
+                          style: TextStyle(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          user.bio,
+                          style: TextStyle(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.black
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -143,21 +179,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       SizedBox(width: 53.w),
-                      Text(
-                        user.followers.length.toString(),
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.sp,
-                        ),
-                      ),
-                      SizedBox(width: 70.w),
-                      Text(
-                        user.following.length.toString(),
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.sp,
-                        ),
-                      ),
                     ],
                   ),
                   Row(
@@ -170,144 +191,42 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       SizedBox(width: 25.w),
-                      Text(
-                        'Followers',
-                        style: TextStyle(
-                          fontSize: 13.sp,
-                        ),
-                      ),
-                      SizedBox(width: 19.w),
-                      Text(
-                        'Following',
-                        style: TextStyle(
-                          fontSize: 13.sp,
-                        ),
-                      ),
+
                     ],
                   ),
                 ],
               )
             ],
           ),
+
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  user.username,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+            padding: EdgeInsets.symmetric(horizontal: 13.w),
+            child: GestureDetector(
+              onTap: () {
+                if (!yourse) {
+                  Firebase_Firestor().flollow(uid: widget.Uid);
+                  setState(() {
+                    follow = true;
+                  });
+                }
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 30.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white, // Always white for "Edit Your Profile"
+                  borderRadius: BorderRadius.circular(5.r),
+                  border: Border.all(color: Colors.grey.shade400), // Grey border
                 ),
-                SizedBox(height: 5.h),
-                Text(
-                  user.bio,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w300,
-                  ),
+                child: Text(
+                  'Edit Your Profile',
+                  style: TextStyle(color: Colors.black), // Adjust text color if needed
                 ),
-              ],
-            ),
-          ),
-          SizedBox(height: 20.h),
-          Visibility(
-            visible: !follow,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 13.w),
-              child: GestureDetector(
-                onTap: () {
-                  if (yourse == false) {
-                    Firebase_Firestor().flollow(uid: widget.Uid);
-                    setState(() {
-                      follow = true;
-                    });
-                  }
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 30.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: yourse ? Colors.white : Colors.blue,
-                    borderRadius: BorderRadius.circular(5.r),
-                    border: Border.all(
-                        color: yourse ? Colors.grey.shade400 : Colors.blue),
-                  ),
-                  child: yourse
-                      ? Text('Edit Your Profile')
-                      : Text(
-                          'Follow',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                ),
-              ),
-            ),
-          ),
-          Visibility(
-            visible: follow,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 13.w),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Firebase_Firestor().flollow(uid: widget.Uid);
-                        setState(() {
-                          follow = false;
-                        });
-                      },
-                      child: Container(
-                          alignment: Alignment.center,
-                          height: 30.h,
-                          width: 100.w,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade200,
-                            borderRadius: BorderRadius.circular(5.r),
-                            border: Border.all(color: Colors.grey.shade200),
-                          ),
-                          child: Text('Unfollow')),
-                    ),
-                  ),
-                  SizedBox(width: 8.w),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30.h,
-                      width: 100.w,
-                      decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(5.r),
-                        border: Border.all(color: Colors.grey.shade200),
-                      ),
-                      child: Text(
-                        'Message',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                  ),
-                ],
               ),
             ),
           ),
           SizedBox(height: 5.h),
-          SizedBox(
-            width: double.infinity,
-            height: 30.h,
-            child: const TabBar(
-              unselectedLabelColor: Colors.grey,
-              labelColor: Colors.black,
-              indicatorColor: Colors.black,
-              tabs: [
-                Icon(Icons.grid_on),
-                Icon(Icons.video_collection),
-                Icon(Icons.person),
-              ],
-            ),
-          ),
           SizedBox(
             height: 5.h,
           )

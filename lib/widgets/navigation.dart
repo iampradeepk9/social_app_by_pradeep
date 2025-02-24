@@ -2,11 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/screen/add_screen.dart';
-import 'package:flutter_instagram_clone/screen/explor_screen.dart';
 import 'package:flutter_instagram_clone/screen/explore.dart';
 import 'package:flutter_instagram_clone/screen/home.dart';
 import 'package:flutter_instagram_clone/screen/profile_screen.dart';
-import 'package:flutter_instagram_clone/screen/reelsScreen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Navigations_Screen extends StatefulWidget {
@@ -23,14 +21,12 @@ class _Navigations_ScreenState extends State<Navigations_Screen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     pageController = PageController();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     pageController.dispose();
   }
@@ -65,14 +61,7 @@ class _Navigations_ScreenState extends State<Navigations_Screen> {
               label: '',
             ),
             const BottomNavigationBarItem(
-              icon: Icon(Icons.camera),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                'images/instagram-reels-icon.png',
-                height: 20.h,
-              ),
+              icon: Icon(Icons.add_box_outlined),
               label: '',
             ),
             const BottomNavigationBarItem(
@@ -89,7 +78,6 @@ class _Navigations_ScreenState extends State<Navigations_Screen> {
           HomeScreen(),
           ExploreScreen(),
           AddScreen(),
-          ReelScreen(),
           ProfileScreen(
             Uid: _auth.currentUser!.uid,
           ),

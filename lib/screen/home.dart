@@ -22,20 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        title: SizedBox(
-          width: 105.w,
-          height: 28.h,
-          child: Image.asset('images/instagram.jpg'),
-        ),
-        leading: Image.asset('images/camera.jpg'),
-        actions: [
-          const Icon(
-            Icons.favorite_border_outlined,
-            color: Colors.black,
-            size: 25,
+        title: Center(
+          child: Text(
+           'Social App',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
-          Image.asset('images/send.jpg'),
-        ],
+        ),
         backgroundColor: const Color(0xffFAFAFA),
       ),
       body: CustomScrollView(

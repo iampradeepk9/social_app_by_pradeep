@@ -181,19 +181,6 @@ class _ReelsItemState extends State<ReelsItem> {
                 ),
               ),
               SizedBox(height: 15.h),
-              Icon(
-                Icons.send,
-                color: Colors.white,
-                size: 28.w,
-              ),
-              SizedBox(height: 3.h),
-              Text(
-                '0',
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: Colors.white,
-                ),
-              ),
             ],
           ),
         ),

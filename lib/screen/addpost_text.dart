@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_instagram_clone/data/firebase_service/firestor.dart';
@@ -53,7 +52,7 @@ class _AddPostTextScreenState extends State<AddPostTextScreen> {
                   Navigator.of(context).pop();
                 },
                 child: Text(
-                  'Share',
+                  'Post',
                   style: TextStyle(color: Colors.blue, fontSize: 15.sp),
                 ),
               ),
@@ -101,21 +100,6 @@ class _AddPostTextScreenState extends State<AddPostTextScreen> {
                               ),
                             ),
                           ],
-                        ),
-                      ),
-                      const Divider(),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.w),
-                        child: SizedBox(
-                          width: 280.w,
-                          height: 30.h,
-                          child: TextField(
-                            controller: location,
-                            decoration: const InputDecoration(
-                              hintText: 'Add location',
-                              border: InputBorder.none,
-                            ),
-                          ),
                         ),
                       ),
                     ],

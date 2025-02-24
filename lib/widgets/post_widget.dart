@@ -51,21 +51,10 @@ class _PostWidgetState extends State<PostWidget> {
                 widget.snapshot['location'],
                 style: TextStyle(fontSize: 11.sp),
               ),
-              trailing: const Icon(Icons.more_horiz),
             ),
           ),
         ),
         GestureDetector(
-          onDoubleTap: () {
-            Firebase_Firestor().like(
-                like: widget.snapshot['like'],
-                type: 'posts',
-                uid: user,
-                postId: widget.snapshot['postId']);
-            setState(() {
-              isAnimating = true;
-            });
-          },
           child: Stack(
             alignment: Alignment.center,
             children: [
@@ -153,31 +142,20 @@ class _PostWidgetState extends State<PostWidget> {
                         },
                       );
                     },
-                    child: Image.asset(
-                      'images/comment.webp',
-                      height: 28.h,
+                    child:
+                    Icon(
+                      Icons.comment_outlined, // You can also use Icons.comment_outlined
+                      size: 25.0,    // Adjust the size as needed
+                      color: Colors.black87, // Set the color as needed
                     ),
                   ),
                   SizedBox(width: 17.w),
-                  Image.asset(
-                    'images/send.jpg',
-                    height: 28.h,
-                  ),
-                  const Spacer(),
-                  Padding(
-                    padding: EdgeInsets.only(right: 15.w),
-                    child: Image.asset(
-                      'images/save.png',
-                      height: 28.h,
-                    ),
-                  ),
                 ],
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: 30.w,
-                  top: 4.h,
-                  bottom: 8.h,
+                  left: 35.w,
+                  bottom: 5.h,
                 ),
                 child: Text(
                   widget.snapshot['like'].length.toString(),
@@ -193,7 +171,7 @@ class _PostWidgetState extends State<PostWidget> {
                   children: [
                     Expanded(
                       child: Text(
-                        widget.snapshot['username'] +
+                        'caption' +
                             ' :  ' +
                             widget.snapshot['caption'],
                         style: TextStyle(
@@ -203,14 +181,6 @@ class _PostWidgetState extends State<PostWidget> {
                       ),
                     ),
                   ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 15.w, top: 20.h, bottom: 8.h),
-                child: Text(
-                  formatDate(widget.snapshot['time'].toDate(),
-                      [yyyy, '-', mm, '-', dd]),
-                  style: TextStyle(fontSize: 11.sp, color: Colors.grey),
                 ),
               ),
             ],
