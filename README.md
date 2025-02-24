@@ -25,14 +25,13 @@ This project was created by Pradeep Sharma.
 
 Screenshots:
 
-![WhatsApp Image 2025-02-24 at 12.32.16 PM (3).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.16%20PM%20%283%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.15 PM.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.15%20PM.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.15 PM (1).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.15%20PM%20%281%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.15 PM (2).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.15%20PM%20%282%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.15 PM (3).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.15%20PM%20%283%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.15 PM (4).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.15%20PM%20%284%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.15 PM (5).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.15%20PM%20%285%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.16 PM.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.16%20PM.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.16 PM (1).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.16%20PM%20%281%29.jpeg)
-![WhatsApp Image 2025-02-24 at 12.32.16 PM (2).jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2FWhatsApp%20Image%202025-02-24%20at%2012.32.16%20PM%20%282%29.jpeg)
-
+![10.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F10.jpeg)
+![1.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F1.jpeg)
+![2.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F2.jpeg)
+![3.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F3.jpeg)
+![4.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F4.jpeg)
+![5.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F5.jpeg)
+![6.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F6.jpeg)
+![7.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F7.jpeg)
+![8.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F8.jpeg)
+![9.jpeg](..%2F..%2FUsers%2FAdmin%2FDownloads%2F9.jpeg)
