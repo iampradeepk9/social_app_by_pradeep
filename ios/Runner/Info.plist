@@ -12,7 +12,7 @@
 
 	<key>NSMicrophoneUsageDescription</key>
 
-	<string>Need to upload image</string>
+	<string>Need to  upload image</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
